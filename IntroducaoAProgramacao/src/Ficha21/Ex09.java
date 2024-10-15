@@ -1,14 +1,19 @@
 package Ficha21;
+import java.util.Scanner;
 
 public class Ex09 {
     public static void main( String [] args){
-    
-        byte horas= 5;
-        byte minutos= 37;
-        byte segundos= 45;
+        Scanner valorScanner = new Scanner(System.in);
+        System.out.println("Introduzir horas:");
+        short horas = valorScanner.nextShort();
+        System.out.println("Introduzir minutos:");
+        short minutos = valorScanner.nextShort();
+        System.out.println("Introduzir segundos:");
+        short segundos = valorScanner.nextShort();
 
         int horasEmSegundos= horas * 3600 + minutos*60 + segundos;
 
         System.out.println(horas+" horas, "+minutos+" minutos e "+segundos+" segundos é equivalente a "+horasEmSegundos+" segundos.");
+        valorScanner.close();
     }
 }
